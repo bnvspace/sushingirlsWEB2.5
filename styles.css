@@ -1,22 +1,24 @@
 ﻿/* Общие стили */
 body {
     margin: 0;
-    padding: 0;
+    padding: 2%;
     font-family: 'Press Start 2P', cursive;
-    background-color: #0a0f20;
+    background-color: #1d2747;
     color: #ff69b4;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Изменено на flex-start для более компактного размещения */
     min-height: 100vh;
     text-align: center;
+    line-height: min(26px);
+
 }
 
 header {
     width: 100%;
     background-color: #1f1f1f;
-    padding: 20px;
+    padding: 10px 5%; /* Уменьшены отступы для компактности */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,16 +29,17 @@ header {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Уменьшен размер шрифта */
     color: #ff69b4;
     text-shadow: 0 0 10px #ff69b4, 0 0 20px #00bfff;
 }
 
 .nav a {
-    margin-left: 20px;
+    margin-left: 15px; /* Уменьшен отступ между ссылками */
     color: #00bfff;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-size: 0.9rem; /* Уменьшен размер шрифта */
 }
 
 .nav a:hover {
@@ -51,16 +54,20 @@ header {
 .lang-switcher button {
     background-color: #ff69b4;
     color: #0a0f20;
-    padding: 10px;
+    padding: 5px 10px; /* Уменьшены отступы для компактности */
     border: none;
     cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
     font-size: 14px;
+    border-radius: 5px; /* Добавлены закругленные углы */
+    transition: background-color 0.3s ease; /* Добавлен эффект плавного изменения цвета */
 }
 
 .lang-switcher button:hover {
     background-color: #00bfff;
     color: #0a0f20;
 }
+
 
 /* маскот */
 .hero {
@@ -76,6 +83,7 @@ header {
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    line-height: 50px;
 }
 
 .hero p {
@@ -107,12 +115,16 @@ header {
 
 
 .section {
-    padding: 50px 20px;
-    background-color: #1f1f1f;
+    background: linear-gradient(135deg, #0a0f20, #9c4673); /* Плавный переход от тёмного синего к тёмно-серому */
     color: #fff;
-    text-shadow: 0 0 5px #00bfff;
+    padding: 50px 20px;
     margin: 20px 0;
+    text-shadow: 0 0 5px #00bfff;
+    border-radius: 15px; /* Немного закругленные углы */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Тень для дополнительного объема */
 }
+
+
 
 .section h2 {
     font-size: 2rem;
@@ -153,11 +165,35 @@ header {
 }
 
 .footer {
-    padding: 20px 0;
+    padding: 10px 0;
     background-color: #0a0f20;
     color: #fff;
     font-size: 0.8rem;
     border-top: 2px solid #ff69b4;
     text-align: center;
     margin-top: 20px;
+    width: 100%;
 }
+
+.contacts a {
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contacts a:hover {
+    color: #00bfff;
+}
+
+/* Общий стиль для социальных ссылок */
+.social {
+    color: #223545; /* Более спокойный серо-синий цвет */
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+}
+
+.social:hover {
+    color: #ff69b4; /* При наведении можно использовать другой цвет */
+}
+

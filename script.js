@@ -1,5 +1,4 @@
-﻿// Переводы для английского и русского языков
-const translations = {
+﻿const translations = {
     en: {
         'about': 'About the Project',
         'about-title': 'About the Project',
@@ -14,7 +13,10 @@ const translations = {
         'roadmap-q4-nft': 'Q4 2024: Launch of NFT collection',
         'contacts': 'Contacts',
         'contacts-title': 'Contacts',
-        'contacts-desc': 'Follow us on social media: <a href="#https://x.com/sushiandgirls?s=21">Twitter</a>, <a href="#https://t.me/sushingirls">Telegram</a>',
+        'contacts-desc': 'Follow us on social media: <a href="https://x.com/sushiandgirls?s=21" class="social">Twitter</a>, <a href="https://t.me/sushingirls" class="social">Telegram</a>',
+        'contacts-email': 'Contact us: <a href="mailto:sushi.n.girls@gmail.com" class="social">sushi.n.girls@gmail.com</a>',
+        'contacts-links': 'Useful links: <a href="https://www.dextools.io/app/en/ton/pair-explorer/EQBQsgdbqZnCdXWCiTh676bwMtlrx-j4Ky81yHFce-oIiVvA" class="social" target="_blank">DexTools</a>, <a href="https://www.geckoterminal.com/ru/ton/pools/EQBQsgdbqZnCdXWCiTh676bwMtlrx-j4Ky81yHFce-oIiVvA" class="social" target="_blank">GeckoTerminal</a>, <a href="https://dexscreener.com/ton/eqbqsgdbqzncdxwcith676bwmtlrx-j4ky81yhfce-oiivva" class="social" target="_blank">DexScreener</a>',
+        'contacts-contract': 'Token contract address: <strong>EQBSVKw3FK2o_aFJyMbdddTDQKLgvobVIzLwx8o9TwoksuK</strong>',
         'hero': 'Welcome to the STO Community Sushi and Girls',
         'hero-desc': 'STO token in a cyberpunk style with pixel aesthetics inspired by the genius phrase about girls and sushi.',
         'hero-btn': 'Learn more'
@@ -33,7 +35,10 @@ const translations = {
         'roadmap-q4-nft': 'Q4 2024: Запуск NFT-коллекции',
         'contacts': 'Контакты',
         'contacts-title': 'Контакты',
-        'contacts-desc': 'Следите за нами в соцсетях: <a href="#https://x.com/sushiandgirls?s=21">Twitter</a>, <a href="#https://t.me/sushingirls">Telegram</a>',
+        'contacts-desc': 'Следите за нами в соцсетях: <a href="https://x.com/sushiandgirls?s=21" class="social">Twitter</a>, <a href="https://t.me/sushingirls" class="social">Telegram</a>',
+        'contacts-email': 'Обратная связь: <a href="mailto:sushi.n.girls@gmail.com" class="social">sushi.n.girls@gmail.com</a>',
+        'contacts-links': 'Полезные ссылки: <a href="https://www.dextools.io/app/en/ton/pair-explorer/EQBQsgdbqZnCdXWCiTh676bwMtlrx-j4Ky81yHFce-oIiVvA" class="social" target="_blank">DexTools</a>, <a href="https://www.geckoterminal.com/ru/ton/pools/EQBQsgdbqZnCdXWCiTh676bwMtlrx-j4Ky81yHFce-oIiVvA" class="social" target="_blank">GeckoTerminal</a>, <a href="https://dexscreener.com/ton/eqbqsgdbqzncdxwcith676bwmtlrx-j4ky81yhfce-oiivva" class="social" target="_blank">DexScreener</a>',
+        'contacts-contract': 'Адрес контракта токена: <strong>EQBSVKw3FK2o_aFJyMbdddTDQKLgvobVIzLwx8o9TwoksuK</strong>',
         'hero': 'Добро пожаловать в СТО Community Sushi and Girls',
         'hero-desc': 'СТО токен в стилистике киберпанка и пиксельной эстетикой вдохновленный фразой гения про девочек и суши.',
         'hero-btn': 'Узнать больше'
