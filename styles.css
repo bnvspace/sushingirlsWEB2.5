@@ -1,45 +1,50 @@
-﻿/* Общие стили */
+﻿
+html {
+    scroll-behavior: smooth;
+}
+/* Общие стили */
 body {
     margin: 0;
-    padding: 2%;
+    padding: 0;
     font-family: 'Press Start 2P', cursive;
     background-color: #1d2747;
     color: #ff69b4;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Изменено на flex-start для более компактного размещения */
+    justify-content: flex-start;
     min-height: 100vh;
     text-align: center;
-    line-height: min(26px);
-
+    line-height: 26px;
 }
 
 header {
     width: 100%;
+    max-width: 1440px;
     background-color: #1f1f1f;
-    padding: 10px 5%; /* Уменьшены отступы для компактности */
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #ff69b4;
+    box-sizing: border-box; /* Учитываем паддинги при расчете ширины */
     position: fixed;
-    top: 0;
-    z-index: 1000;
 }
-
+.hidden{
+    height: 60px;
+}
 .logo {
-    font-size: 1.2rem; /* Уменьшен размер шрифта */
+    font-size: 1.2rem;
     color: #ff69b4;
     text-shadow: 0 0 10px #ff69b4, 0 0 20px #00bfff;
 }
 
 .nav a {
-    margin-left: 15px; /* Уменьшен отступ между ссылками */
+    margin-left: 15px;
     color: #00bfff;
     text-decoration: none;
     transition: color 0.3s ease;
-    font-size: 0.9rem; /* Уменьшен размер шрифта */
+    font-size: 0.9rem;
 }
 
 .nav a:hover {
@@ -48,30 +53,35 @@ header {
 
 .lang-switcher {
     display: flex;
-    gap: 10px;
+    gap:10px;
+    
 }
 
 .lang-switcher button {
     background-color: #ff69b4;
     color: #0a0f20;
-    padding: 5px 10px; /* Уменьшены отступы для компактности */
+    padding: 5px 10px;
     border: none;
     cursor: pointer;
     font-family: 'Press Start 2P', cursive;
     font-size: 14px;
-    border-radius: 5px; /* Добавлены закругленные углы */
-    transition: background-color 0.3s ease; /* Добавлен эффект плавного изменения цвета */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .lang-switcher button:hover {
     background-color: #00bfff;
-    color: #0a0f20;
 }
-
-
-/* маскот */
-.hero {
-    padding: 120px 20px;
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+}
+/* Маскот */
+.container .hero {
+    padding: 70px 20px;
     background: #0a0f20;
     color: #fff;
     text-shadow: 0 0 10px #ff69b4;
@@ -80,19 +90,19 @@ header {
     align-items: center;
 }
 
-.hero h1 {
+.container .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     line-height: 50px;
 }
 
-.hero p {
+.container .hero p {
     font-size: 1rem;
     margin-bottom: 30px;
 }
 
-.hero-image img {
-    max-width: 60%;
+.container .hero-image img {
+    max-width: 40%;
     height: auto;
 }
 
@@ -113,18 +123,18 @@ header {
     box-shadow: 0 0 15px #00bfff, 0 0 25px #ff69b4;
 }
 
-
+/* Секция */
 .section {
-    background: linear-gradient(135deg, #0a0f20, #9c4673); /* Плавный переход от тёмного синего к тёмно-серому */
+    width: 100%;
+    max-width: 90%;
+    background: linear-gradient(135deg, #0a0f20, #9c4673);
     color: #fff;
     padding: 50px 20px;
     margin: 20px 0;
     text-shadow: 0 0 5px #00bfff;
-    border-radius: 15px; /* Немного закругленные углы */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Тень для дополнительного объема */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
-
-
 
 .section h2 {
     font-size: 2rem;
@@ -134,35 +144,23 @@ header {
 
 .section .content-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.section .content {
-    width: 60%;
+.section .content, .section .image {
+    width: 30%;
 }
-
-.section .image {
-    width: 35%;
+.section .contacts{
+    width: 100%;
 }
-
 .section img {
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 768px) {
-    .section .content-container {
-        flex-direction: column;
-    }
 
-    .section .content,
-    .section .image {
-        width: 100%;
-    }
-}
 
 .footer {
     padding: 10px 0;
@@ -185,15 +183,18 @@ header {
     color: #00bfff;
 }
 
-/* Общий стиль для социальных ссылок */
+/* Социальные ссылки */
 .social {
-    color: #223545; /* Более спокойный серо-синий цвет */
+    color: #223545;
     text-decoration: none;
     transition: color 0.3s ease;
-
 }
 
 .social:hover {
-    color: #ff69b4; /* При наведении можно использовать другой цвет */
+    color: #ff69b4;
 }
-
+@media (max-width: 768px) {
+    .section .content, .section .image {
+        width: 100%;
+    }
+}

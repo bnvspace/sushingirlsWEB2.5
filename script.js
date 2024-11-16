@@ -63,3 +63,4 @@ document.getElementById('switchToEn').addEventListener('click', () => switchLang
 document.getElementById('logo').addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
